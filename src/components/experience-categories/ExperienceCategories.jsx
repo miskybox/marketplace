@@ -7,7 +7,7 @@ const categories = [
     { id: 2, name: "Escritura" },
     { id: 3, name: "Acuarela" },
     { id: 4, name: "Cocina" },
-    { id: 5, name: "Bordado" },
+    { id: 5, name: "Fotografía" },
     { id: 6, name: "Cosmética" },
 ];
 
@@ -47,6 +47,24 @@ const experiences = [
         price: 70,
         image: "/placeholder.svg?height=300&width=400",
         format: "Presencial",
+    },
+    {
+        id: 5,
+        title: "Fotografía de viajes: Captura el mundo",
+        category: "Fotografía",
+        location: "Barcelona",
+        price: 60,
+        image: "/placeholder.svg?height=300&width=400",
+        format: "Presencial",
+    },
+    {
+        id: 6,
+        title: "Cosmética natural: Cuida tu piel",
+        category: "Cosmética",
+        location: "Online",
+        price: 40,
+        image: "/placeholder.svg?height=300&width=400",
+        format: "Online",
     },
 ];
 
