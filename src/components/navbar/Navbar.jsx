@@ -1,36 +1,40 @@
-//Navbar.jsx
-import React, { useState } from "react";
-import LoginForm from "../login/AuthForm";
-import styles from "./Navbar.module.css";
+
+// Navbar.jsx
+import React from 'react';
+import styles from "./NavBar.module.css";
+import { Link } from "react-router-dom";
+import logoImgDark from "../../assets/artprintLogoDark.png";
 
 const Navbar = () => {
-    const [showLogin, setShowLogin] = useState(false);
+  return (
+    <>
+      <nav className={styles.navbar}>
+        <div className={styles.logo}>
+          <Link to="/" className={styles.logoLink}>
+            <img src={logoImgDark} alt="ArtPrint" />
+          </Link>
+        </div>
 
-    return (
-        <>
-            <nav className={styles.navbar}>
-                <div className={styles.logo}>
-                    <img src="/logo.png" alt="ArtPrint" />
-                </div>
-                <div className={styles.categories}>
-                    <ul className={styles.categoryList}>
-                        <li><a href="#ceramica">Cerámica</a></li>
-                        <li><a href="#escritura">Escritura</a></li>
-                        <li><a href="#acuarela">Acuarela</a></li>
-                        <li><a href="#cocina">Cocina</a></li>
-                        <li><a href="#bordado">Fotografía</a></li>
-                        <li><a href="#cosmetica">Cosmética</a></li>
-                    </ul>
-                </div>
-                <div className={styles.navActions}>
-                    <button className={styles.loginButton} onClick={() => setShowLogin(true)}>Iniciar sesión</button>
-                    <span className={styles.cartIcon}>🛒</span>
-                </div>
-            </nav>
+        <div className={styles.categories}>
+          <ul className={styles.categoryList}>
+            <li><Link to="/ceramica">Cerámica</Link></li>
+            <li><Link to="/escritura">Escritura</Link></li>
+            <li><Link to="/acuarela">Acuarela</Link></li>
+            <li><Link to="/cocina">Cocina</Link></li>
+            <li><Link to="/fotografia">Fotografía</Link></li>
+            <li><Link to="/cosmetica">Cosmética</Link></li>
+          </ul>
+        </div>
 
-            {showLogin && <LoginForm />}
-        </>
-    );
+        <div className={styles.navActions}>
+          <Link to="/login">
+            <button className={styles.loginButton}>Iniciar sesión</button>
+          </Link>
+          <span className={styles.cartIcon}>🛒</span>
+        </div>
+      </nav>
+    </>
+  );
 };
 
 export default Navbar;
