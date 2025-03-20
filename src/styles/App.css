@@ -21,10 +21,11 @@
   --color-dark-blue: #18019C;
   --color-medium-blue: #80B1F3;
   --color-dark-green: #343C03;
+
   
-  /* Variables de tipografía */
-  --font-title: 'Arsenica Antiqua', serif;
-  --font-text: 'Codec Pro', sans-serif;
+  --font-title: "Arsenica Antiqua", serif;
+  --font-text: "Codec Pro", sans-serif;
+  
 }
 
 /* Estilos globales */
