@@ -75,7 +75,15 @@ input {
     color: var(--color-dark-blue);
     cursor: pointer;
     text-decoration: underline;
-}
+  }
+  /*
+  .toggleLink {
+    color: var(--color-dark-blue);
+    cursor: pointer;
+    text-decoration: underline;
+    margin-left: 0.5rem;
+  }*/
+  
 .success {
     margin-top: 1rem;
     color: var(--color-dark-green);
