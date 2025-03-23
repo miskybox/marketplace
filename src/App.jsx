@@ -1,28 +1,36 @@
-// App.jsx
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/navbar/Navbar';
-import ExperienceCategories from './components/experience-categories/ExperienceCategories';
-import HeroSection from './components/heroSection/HeroSection';
-import Footer from './components/footer/Footer';
-import AuthForm from './components/login/AuthForm';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/navbar/NavBar";
+import ExperienceCategories from "./components/experience-categories/ExperienceCategories";
+import HeroSection from "./components/hero-section/HeroSection";
+import Footer from "./components/footer/Footer";
+import Catalog from "./pages/Catalog";
+import AuthForm from "./components/authform/AuthForm";
+import "./styles/App.css";
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <div className="app">
-        {/* Layout con navbar y footer para todas las rutas */}
         <Navbar />
-        
+
         <Routes>
-          <Route path="/" element={<HeroSection />} />
-          <Route path="/experience-categories" element={<ExperienceCategories />} />
+          <Route
+            path="/"
+            element={
+              <>
+                <HeroSection />
+                <ExperienceCategories />
+              </>
+            }
+          />
+          <Route path="/catalog" element={<Catalog />} />
           <Route path="/login" element={<AuthForm />} />
         </Routes>
-        
+
         <Footer />
       </div>
-    </Router>
+    </BrowserRouter>
   );
 };
 

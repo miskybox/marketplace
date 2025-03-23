@@ -264,6 +264,7 @@ const AuthForm = () => {
 export default AuthForm;
 */
 // AuthForm.jsx
+/*
 import React, { useState } from "react";
 import styles from "./AuthForm.module.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -399,3 +400,4 @@ const AuthForm = () => {
 };
 
 export default AuthForm;
+*/
